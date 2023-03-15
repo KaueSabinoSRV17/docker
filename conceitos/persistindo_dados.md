@@ -23,3 +23,26 @@ Podemos definir um Bind Mount ao rodar um novo container:
 	docker run -v <local da sua máquina>:<local do container>
 
 **VALE LEMBRAR QUE A PASTA DEVE EXISITR NA SUA MÁQUINA**
+
+## Volumes
+
+Podemos criar um volume com `volume create`:
+
+	docker volume create <nome do volume>
+
+E depois rodar um container montado a ele:
+
+	docker run -v <nome do volume>:<local do container> <imagem>
+
+É possível rodar `docker run` sem criar o volume primeiro, assim ele será criado automaticamente.
+
+Caso queiramos encontrar o local em que o docker realmente guarda esse conteúdo, estará em: 
+`/var/lib/docker/volumes/<nome do volume>/_data` (Esteja como usuário root para ver!).
+
+## TMPFS
+
+Este tipo só funciona no Linux. Ele vai guardar o conteúdo apenas na memória do Host:
+
+	docker run -v --tmpfs=<local do container> <imagem>
+
+É útil para questões de segurança.
