@@ -9,6 +9,12 @@ Quando fazemos um `docker pull <imagem>` estamos fazendo o download da imagem em
 Quando fazemos um `docker run <imagem>`, fazemos o download caso não tenhamos a imagem na máquina,
 e rodamos um container a partir da imagem.
 
+### Flags
+
+- `-d`: roda o container sem travar o seu terminal.
+- `-p` <porta do seu PC>:<porta do container>: mapeia uma porta do seu PC para uma porta do container.
+- `-P`: mapeia uma porta aleatória do seu PC para uma fixa do container.
+
 ## Ps
 
 Mostra os containers sendo executados. Caso queiramos ver todos, até os não executados, passamos -a como flag
@@ -43,6 +49,10 @@ Apaga um container que não está sendo mais executado
 
 	docker rm <id ou nome do container>
 
+### Flags
+
+- `--force`: força a exclusão. Útil para parar um container e remove-lo em seguida
+
 ## Exec
 
 Roda um comando em um container que está sendo executado
@@ -52,3 +62,9 @@ Roda um comando em um container que está sendo executado
 Caso queiramos entrar em um terminal dentro deste container, passamos antes a flag `-it`
 
 	docker exec -it <id ou nome do container> <bash ou sh> 
+
+## Port
+
+Demonstra como está o mapeamento de portas de um container específico
+
+	docker port <id ou nome do container>
