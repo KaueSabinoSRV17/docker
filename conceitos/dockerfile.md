@@ -22,3 +22,25 @@ RUN npm install
 
 ENTRYPOINT npm start
 ```
+
+## Parâmetros para Imagens/Containeres
+
+Podemos definir parâmetros tanto para Imagens quanto para Containeres
+
+### Instruções do Dockerfile
+
+#### ARG
+
+ARG vai definir um parâmetro apenas em tempo de build, ou seja... ( )
+
+diretamente no `Dockerfile`...
+
+```dockerfile
+ARG <nome do argumento>=<valor desejado>
+```
+
+ou pela flag `--arg <nome do ARG exatamente igual está no Dockerfile>=<valor desejado>` do comando `build`
+
+```dockerfile
+ARG <nome do argumento, sem valor. Ele virá do comando build>
+```

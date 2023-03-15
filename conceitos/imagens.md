@@ -40,6 +40,7 @@ Faz uma imagem a partir de um e `Dockerfile`
 #### Flags
 
 - `-t` <tag desejada>: passa uma tag para a imagem
+- `--arg <nome do ARG exatamente como está no Dockerfile>=<valor desejado>`
 
 ### Images
 
