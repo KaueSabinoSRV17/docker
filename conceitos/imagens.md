@@ -21,6 +21,10 @@ otimizada ao baixar e construir imagens com camadas repetidas: Elas não são ex
 
 ## Comandos
 
+### Pull
+
+Quando fazemos um `docker pull <imagem>` estamos fazendo o download da imagem em nossa máquina
+
 ### Images
 
 Lista as imagens na sua máquina.
