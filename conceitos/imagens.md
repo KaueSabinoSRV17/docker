@@ -19,11 +19,27 @@ Cada camada pode ser descrita como um simples comando a ser executado!
 As camadas são armazenadas no host da sua máquina e são cacheadas. Por isso há uma performance tão 
 otimizada ao baixar e construir imagens com camadas repetidas: Elas não são executadas e instaladas novamente!
 
+## Construindo nossas próprias imagens
+
+Podemos transformar qualquer app que nós quisermos em um container Docker.
+Para isso, basta descrever todas as camadas que garantem que o container rode em um arquivo, 
+chamado Dockerfile.
+
 ## Comandos
 
 ### Pull
 
 Quando fazemos um `docker pull <imagem>` estamos fazendo o download da imagem em nossa máquina
+
+### Build
+
+Faz uma imagem a partir de um e `Dockerfile`
+
+	docker build <caminho até uma pasta que contêm um Dockerfile>
+
+#### Flags
+
+- `-t` <tag desejada>: passa uma tag para a imagem
 
 ### Images
 
