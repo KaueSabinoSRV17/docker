@@ -16,6 +16,10 @@ Com o `docker inspect <id do container>` podemos ver o Ip Adress de cada contain
 
 Caso estivermos usando um terminal dentro de um container, e "pingar" o IP de outro container, ele deverá responder normalmente.
 
+Porém, não é muito viável tentar fazer essa comunicação por IP, por quê devido a natureza efêmera dos containeres, 
+ao parar e rodar um container de novo, ele poderá não ter o mesmo IP. Por isso, é uma boa idéia realizar a comunicação
+por nome de container (DNS).
+
 Para que possamos referenciar containeres na rede pelo nome, devemos criar uma rede própria, que usa o driver `bridge`.
 
 ## Comandos
