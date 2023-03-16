@@ -46,7 +46,9 @@ e rodamos um container a partir da imagem.
 - `-d`: roda o container sem travar o seu terminal.
 - `-p` <porta do seu PC>:<porta do container>: mapeia uma porta do seu PC para uma porta do container.
 - `-P`: mapeia uma porta aleatória do seu PC para uma fixa do container.
-- `-v <tipos de volumes (bind-mount, volume do Docker e tmpfs)>`: estipula um volume para o container a ser rodado.
+- `-v <volume Docker ou local da sua máquina>:<local do container>`: estipula um volume para o container a ser rodado.
+- `--network`: define uma rede para o container.
+- `--name`: digine um nome para o container. Útil ao usar uma rede de driver `bridge` customizada, pois será possível fazer a comunicação pelo nome.
 
 ## Ps
 
